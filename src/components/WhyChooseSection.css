@@ -61,8 +61,13 @@
 }
 
 @keyframes wc-pulse {
-  70%  { box-shadow: 0 0 0 10px transparent; }
-  100% { box-shadow: 0 0 0 0 transparent; }
+  70% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
 }
 
 /* ── Heading ── */
@@ -92,8 +97,13 @@
 }
 
 @keyframes wc-hl {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0 0 0); }
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .wc-lead {
@@ -117,7 +127,7 @@
   gap: 56px;
   width: max-content;
   padding: 10px 0;
-  animation: wc-left 28s linear infinite;
+  animation: wc-left 25s linear infinite !important;
 }
 
 .wc-reverse {
@@ -125,13 +135,8 @@
 }
 
 .wc-reverse .wc-track {
-  animation-name: wc-right;
-  animation-duration: 34s;
+  animation: wc-right 29s linear infinite !important;
   opacity: 0.6;
-}
-
-.wc-marq:hover .wc-track {
-  animation-play-state: paused;
 }
 
 .wc-track span {
@@ -151,12 +156,19 @@
 }
 
 @keyframes wc-left {
-  to { transform: translateX(-50%); }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes wc-right {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* ── Grid ── */
@@ -226,7 +238,9 @@
 }
 
 @keyframes wc-float {
-  50% { transform: none; }
+  50% {
+    transform: none;
+  }
 }
 
 /* ── Card Typography ── */
@@ -349,16 +363,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wc-section *,
-  .wc-section *::before,
-  .wc-section *::after {
-    animation: none !important;
-    transition: none !important;
-  }
 
   .wc-card,
   .wc-reason-card {
     opacity: 1;
     transform: none;
+    transition: none !important;
   }
 }

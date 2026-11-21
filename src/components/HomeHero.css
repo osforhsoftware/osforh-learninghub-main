@@ -1,0 +1,514 @@
+/* Home Hero Component Styling - Reference Redesign with Osforh Identity */
+.osforh-hero-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #fbf9f4;
+  /* Graph paper grid texture matching reference image */
+  background-image: 
+    linear-gradient(rgba(0, 103, 56, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 103, 56, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  overflow: hidden;
+  padding: 135px 0 65px;
+  border-bottom: 1px solid rgba(0, 103, 56, 0.1);
+}
+
+.osforh-hero-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Content Column */
+.osforh-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 3;
+}
+
+/* Google Rating Card from Reference */
+.google-rating-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1.5px solid #ebebeb;
+  border-radius: 14px;
+  padding: 8px 16px;
+  box-shadow: 0 8px 24px -4px rgba(20, 20, 58, 0.07);
+  margin-bottom: 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-rating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(20, 20, 58, 0.12);
+}
+
+.rating-score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.rating-score-box .score {
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: #14143a;
+  letter-spacing: -0.02em;
+}
+
+.rating-score-box .label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7b8593;
+  margin-top: 3px;
+}
+
+.rating-stars-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding-left: 8px;
+  border-left: 1px solid #f0f0f0;
+}
+
+.google-brand-logo {
+  display: flex;
+  align-items: center;
+  height: 18px;
+}
+
+.stars-row {
+  display: flex;
+  gap: 3px;
+  color: #fab005;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Osforh Location Eyebrow */
+.hero-tagline-eyebrow {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Osforh Verified Main Title */
+.hero-main-title {
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: clamp(36px, 4.4vw, 58px);
+  font-weight: 850;
+  line-height: 1.12;
+  color: #14143a;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+}
+
+.hero-main-title .highlight {
+  color: #006738;
+  display: inline-block;
+}
+
+/* Osforh Description */
+.hero-description-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #63707f;
+  max-width: 520px;
+  margin: 0 0 28px;
+}
+
+/* Feature Checklist / Pillars */
+.hero-pillars-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 34px;
+}
+
+.pillar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #14143a;
+}
+
+.pillar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* Dual CTAs matching Osforh Brand Buttons */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-enroll {
+  background: #A7CB05;
+  color: #ffffff;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px -3px rgba(167, 203, 5, 0.45);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary-enroll:hover {
+  background: #8fae02;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -3px rgba(167, 203, 5, 0.55);
+}
+
+.btn-secondary-consult {
+  background: #ffffff;
+  color: #14143a;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #dcdfe5;
+  box-shadow: 0 4px 12px rgba(20, 20, 58, 0.04);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-consult:hover {
+  background: rgba(167, 203, 5, 0.08);
+  border-color: #A7CB05;
+  color: #14143a;
+  transform: translateY(-2px);
+}
+
+/* Right Visual Column */
+.osforh-hero-visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 520px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Subtle ambient brand glow behind mentors */
+.osforh-hero-visual::before {
+  content: '';
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(167, 203, 5, 0.12) 0%, rgba(0, 103, 56, 0.06) 45%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+.osforh-hero-visual:hover::before {
+  transform: translateX(-50%) scale(1.1);
+  opacity: 1;
+}
+
+/* Genuine Company Duo Container */
+.hero-team-duo {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  height: 520px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+}
+
+.team-person {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  will-change: transform, filter;
+  /* Ultra-smooth cinematic slow-motion easing curve */
+  transition: transform 0.85s cubic-bezier(0.2, 0.9, 0.3, 1), filter 0.85s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.team-person.person-back {
+  left: 3%;
+  width: 54%;
+  max-width: 330px;
+  z-index: 2;
+}
+
+.team-person.person-front {
+  right: 2%;
+  width: 58%;
+  max-width: 355px;
+  z-index: 3;
+}
+
+.team-cutout-img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 14px 28px rgba(16, 28, 61, 0.12));
+  transition: filter 0.85s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+/* 1. Subtle, Neat Individual Hover on Person 1 (Back / Left) */
+.team-person.person-back:hover {
+  transform: translateY(-5px);
+  z-index: 4;
+}
+
+.team-person.person-back:hover .team-cutout-img {
+  filter: drop-shadow(0 20px 36px rgba(0, 103, 56, 0.2)) drop-shadow(0 8px 16px rgba(16, 28, 61, 0.1));
+}
+
+/* 2. Subtle, Neat Individual Hover on Person 2 (Front / Right) */
+.team-person.person-front:hover {
+  transform: translateY(-6px);
+  z-index: 5;
+}
+
+.team-person.person-front:hover .team-cutout-img {
+  filter: drop-shadow(0 22px 38px rgba(0, 103, 56, 0.22)) drop-shadow(0 8px 18px rgba(16, 28, 61, 0.12));
+}
+
+/* Subtle gentle depth balance */
+.hero-team-duo:has(.team-person.person-back:hover) .team-person.person-front {
+  opacity: 0.96;
+}
+
+.hero-team-duo:has(.team-person.person-front:hover) .team-person.person-back {
+  opacity: 0.95;
+}
+
+/* Decorative Doodles from the Reference Image */
+.doodle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 6;
+  color: #14143a;
+  opacity: 0.85;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease;
+}
+
+.doodle-sparkle-1 {
+  top: 10%;
+  left: 36%;
+  animation: floatSlow 4s ease-in-out infinite alternate;
+}
+
+.osforh-hero-visual:hover .doodle-sparkle-1 {
+  transform: scale(1.2) rotate(14deg);
+}
+
+.doodle-speech-bubble {
+  top: 4%;
+  right: 12%;
+  animation: floatSlow 5s ease-in-out infinite alternate 1s;
+}
+
+.osforh-hero-visual:hover .doodle-speech-bubble {
+  transform: scale(1.1) translateY(-6px) rotate(3deg);
+}
+
+.doodle-head-accents {
+  top: 18%;
+  left: 14%;
+  animation: floatSlow 4s ease-in-out infinite alternate 0.4s;
+}
+
+.osforh-hero-visual:hover .doodle-head-accents {
+  transform: scale(1.12) translate(-2px, -3px);
+}
+
+.doodle-hash {
+  top: 40%;
+  left: 0%;
+  animation: floatSlow 3.8s ease-in-out infinite alternate 0.5s;
+}
+
+.osforh-hero-visual:hover .doodle-hash {
+  transform: scale(1.15) rotate(-6deg);
+}
+
+.doodle-zigzag {
+  top: 36%;
+  right: -2%;
+  animation: floatSlow 4.5s ease-in-out infinite alternate 1.5s;
+}
+
+.osforh-hero-visual:hover .doodle-zigzag {
+  transform: translate(5px, -5px) scale(1.08);
+}
+
+.doodle-loop-arrow {
+  bottom: 22%;
+  left: -2%;
+  animation: floatSlow 4.2s ease-in-out infinite alternate 0.8s;
+}
+
+.osforh-hero-visual:hover .doodle-loop-arrow {
+  transform: scale(1.12) rotate(4deg);
+}
+
+.doodle-wavy {
+  bottom: 26%;
+  right: 2%;
+  animation: floatSlow 3.5s ease-in-out infinite alternate 2s;
+}
+
+.osforh-hero-visual:hover .doodle-wavy {
+  transform: scale(1.12) translateX(3px);
+}
+
+/* Slider Edge Arrow */
+.hero-slider-edge-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #101c3d;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.hero-slider-edge-arrow:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .osforh-hero-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .osforh-hero-visual {
+    order: -1;
+    min-height: 360px;
+  }
+
+  .hero-main-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .osforh-hero-wrapper {
+    padding: 110px 0 40px;
+    background-size: 24px 24px;
+  }
+
+  .hero-main-title {
+    font-size: 32px;
+  }
+
+  .hero-description-text {
+    font-size: 15px;
+  }
+
+  .hero-pillars-row {
+    gap: 14px;
+  }
+
+  .pillar-item {
+    font-size: 13px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary-enroll,
+  .btn-secondary-consult {
+    width: 100%;
+  }
+
+  .osforh-hero-visual {
+    min-height: 380px;
+    width: 100%;
+  }
+
+  .hero-team-duo {
+    height: 380px;
+    max-width: 420px;
+  }
+
+  .team-cutout-img {
+    max-height: 370px;
+  }
+
+  .hero-slider-edge-arrow {
+    display: none;
+  }
+}

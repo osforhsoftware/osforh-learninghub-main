@@ -1,0 +1,266 @@
+/* ══════════════════════════════════════════════════════════════════════
+   The Skill Creators Section - Reference Redesign for Osforh Learning Hub
+   ══════════════════════════════════════════════════════════════════════ */
+
+.skill-creators-sec {
+  background-color: #fbf9f4;
+  /* Osforh graph-paper texture matching reference */
+  background-image: 
+    linear-gradient(rgba(0, 103, 56, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 103, 56, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  padding: 85px 0 95px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 103, 56, 0.08);
+}
+
+.skill-creators-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+/* Header */
+.skill-creators-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.skill-creators-title {
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 850;
+  color: #101c3d;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+/* Carousel / Cards Track Wrapper */
+.skill-creators-slider-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.skill-creators-cards-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(240px, 1fr));
+  gap: 22px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 4px 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.skill-creators-cards-row::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Mentor Card */
+.mentor-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 12px 12px 18px;
+  border: 1.5px solid #e7eaee;
+  box-shadow: 0 10px 28px -6px rgba(16, 28, 61, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+  position: relative;
+  cursor: default;
+}
+
+.mentor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px -8px rgba(0, 103, 56, 0.16);
+  border-color: #006738;
+}
+
+/* Top Inner Photo Frame */
+.mentor-photo-frame {
+  width: 100%;
+  height: 290px;
+  background: linear-gradient(175deg, #0d213a 0%, #071526 100%);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Decorative background circles matching reference */
+.mentor-frame-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cutout Mentor Photography */
+.mentor-cutout-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.38));
+}
+
+.mentor-card:hover .mentor-cutout-photo {
+  transform: scale(1.04);
+}
+
+/* Bottom Card Details */
+.mentor-card-body {
+  padding: 18px 8px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mentor-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.mentor-name {
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 19px;
+  font-weight: 800;
+  color: #101c3d;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.mentor-role {
+  font-family: var(--body, 'Inter', sans-serif);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #006738;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+/* Action Circle Badge matching reference (pure visual indicator) */
+.mentor-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0f1f38;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(15, 31, 56, 0.25);
+  transition: background 0.2s ease, transform 0.2s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+.mentor-card:hover .mentor-action-btn {
+  background: #006738;
+  transform: translateX(3px);
+}
+
+/* Slider Navigation Arrows (Matching Reference sides) */
+.creators-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #101c3d;
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.creators-slider-arrow.prev {
+  left: -22px;
+}
+
+.creators-slider-arrow.next {
+  right: -22px;
+}
+
+.creators-slider-arrow:hover:not(:disabled) {
+  background: #006738;
+  color: #ffffff;
+  border-color: #006738;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.creators-slider-arrow.disabled,
+.creators-slider-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Bottom Pagination Indicator Dots */
+.creators-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.creators-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.creators-dot.active {
+  width: 24px;
+  border-radius: 6px;
+  background: #006738;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .creators-slider-arrow.prev { left: 4px; }
+  .creators-slider-arrow.next { right: 4px; }
+}
+
+@media (max-width: 900px) {
+  .skill-creators-cards-row {
+    grid-template-columns: repeat(5, 260px);
+  }
+}

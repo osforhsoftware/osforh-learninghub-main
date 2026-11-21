@@ -1,0 +1,416 @@
+/* Explore Programs Section - Reference Redesign with Dual Cards */
+.osforh-programs-sec {
+  background-color: #080d1a;
+  color: #ffffff;
+  padding: 85px 0 95px;
+  position: relative;
+  overflow: hidden;
+}
+
+.osforh-programs-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header & Location Header matching reference "Calicut" */
+.programs-top-location {
+  text-align: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+
+.programs-sec-title {
+  text-align: center;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+
+.programs-sec-title span {
+  color: #a7cb05;
+}
+
+.programs-sec-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: #94a3b8;
+  max-width: 620px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+/* Program Selector Tabs */
+.program-selector-pills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.prog-pill-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.prog-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.prog-pill-btn.active {
+  background: #006738;
+  color: #ffffff;
+  border-color: #00875a;
+  box-shadow: 0 4px 16px rgba(0, 103, 56, 0.4);
+}
+
+/* Dual Cards Grid matching reference layout */
+.dual-program-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Card 1: Left Light Card (Offline In-Campus Course) */
+.program-card-offline {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 28px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.program-card-offline:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 55px -10px rgba(0, 0, 0, 0.45);
+}
+
+.program-card-offline .card-header-title {
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: #0b1329;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+  line-height: 1.25;
+}
+
+.program-card-offline .card-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 20px;
+}
+
+.program-card-offline .card-meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.card-meta-chips .chip {
+  background: #f1f5f9;
+  color: #006738;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.program-card-offline .card-divider-line {
+  height: 1px;
+  background-color: #e2e8f0;
+  width: 100%;
+  margin: 24px 0 28px;
+}
+
+.program-card-offline .card-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+/* Emblem concentric rings logo icon */
+.offline-card-emblem {
+  width: 58px;
+  height: 58px;
+  background: #091224;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(9, 18, 36, 0.25);
+}
+
+.offline-card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #006738;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.offline-card-action-btn:hover {
+  background: #00875a;
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* Card 2: Right Deep Teal/Emerald Card (Online Interactive Course) */
+.program-card-online {
+  background: #005638;
+  color: #ffffff;
+  border-radius: 28px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 45px -10px rgba(0, 86, 56, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.program-card-online:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 55px -10px rgba(0, 86, 56, 0.55);
+}
+
+/* Watermark corner floral pattern exactly matching reference */
+.card-online-watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  opacity: 0.14;
+  color: #ffffff;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.program-card-online .card-online-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.program-card-online .card-header-title {
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+  line-height: 1.25;
+}
+
+.program-card-online .card-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #e2f2eb;
+  margin: 0 0 28px;
+}
+
+/* Online Feature Checklist with arrows & dividers */
+.card-online-features-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.online-feature-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.online-feature-row .feature-arrow {
+  font-size: 16px;
+  color: #a7cb05;
+  font-weight: 800;
+}
+
+.online-card-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.online-card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #a7cb05;
+  color: #0b1329;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.online-card-action-btn:hover {
+  background: #b8de09;
+  color: #000000;
+  transform: translateX(3px);
+}
+
+/* Bottom Bar: Contact Us Button & Navigation */
+.programs-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.programs-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: var(--display, 'Sora', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition: all 0.2s ease;
+}
+
+.programs-contact-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: #f8fafc;
+}
+
+.programs-contact-pill .pill-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.programs-view-all-link {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.programs-view-all-link:hover {
+  color: #a7cb05;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .dual-program-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .program-card-offline,
+  .program-card-online {
+    padding: 34px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .osforh-programs-sec {
+    padding: 60px 0 70px;
+  }
+
+  .programs-top-location {
+    font-size: 26px;
+  }
+
+  .programs-sec-title {
+    font-size: 28px;
+  }
+
+  .program-selector-pills {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .prog-pill-btn {
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 12.5px;
+  }
+
+  .program-card-offline .card-header-title,
+  .program-card-online .card-header-title {
+    font-size: 22px;
+  }
+
+  .programs-bottom-bar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
