@@ -26,8 +26,8 @@ const SKILL_CREATORS = [
     img: arshadImg
   },
   {
-    id: 'musthaq',
-    name: 'Musthaq',
+    id: 'musthak',
+    name: 'Musthak',
     role: 'Digital Marketing Mentor',
     img: musthaqImg
   },

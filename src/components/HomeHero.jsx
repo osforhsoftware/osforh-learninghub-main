@@ -59,22 +59,13 @@ export default function HomeHero() {
 
           {/* Student Value Pillars Checklist */}
           <div className="hero-pillars-row">
-            <div className="pillar-item">
-              <span className="pillar-icon">⏳</span>
-              <span>Get Skilled</span>
-            </div>
-            <div className="pillar-item">
-              <span className="pillar-icon">💼</span>
-              <span>Get Certified</span>
-            </div>
-            <div className="pillar-item">
-              <span className="pillar-icon">📈</span>
-              <span>Get Hired</span>
-            </div>
-            <div className="pillar-item">
-              <span className="pillar-icon">💻</span>
-              <span>Online &amp; Offline</span>
-            </div>
+            <span className="pillar-item">Get Skilled</span>
+            <span className="pillar-divider" aria-hidden="true">|</span>
+            <span className="pillar-item">Get Certified</span>
+            <span className="pillar-divider" aria-hidden="true">|</span>
+            <span className="pillar-item">Get Hired</span>
+            <span className="pillar-divider" aria-hidden="true">|</span>
+            <span className="pillar-item">Online &amp; Offline</span>
           </div>
 
           {/* Dual Action CTAs from Osforh */}
